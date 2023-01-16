@@ -1,0 +1,74 @@
+﻿@using EntityLayer.Concrete
+@model List<House>
+<link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+<!-- Bootstrap icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="~/startbootstrap-shop-homepage-gh-pages/css/styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/assets/css/style-starter.css">
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+
+            @foreach (var item in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="~/HouseImageFiles/@item.HouseImage1" />
+
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" style="text-align:left;">@item.City.CityName</h5>
+                                <!-- Product price-->
+                                <h6 style="text-align:left;">@item.HousePrice TL</h6>
+                                <h7 style="text-align:center;">@item.HouseDescription</h7>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/House/HouseDetails/@item.HouseId">Ev Detay</a></div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+
+@*<section class="grids-1 py-5">
+    <div class="grids py-lg-5 py-md-4">
+        <div class="container">
+            <h3 class="hny-title mb-5">Destinations</h3>
+            <div class="row">
+               @foreach(var item in Model){
+  <div class="col-lg-4 col-md-4 col-6">
+                    <div class="column">
+                        <a href="blog-single.html"><img src="~/HouseImageFiles/@item.HouseImage1" alt="" class="img-fluid"></a>
+                        <div class="info">
+                            <h4>@item.City</h4>
+                            <p>@item.HouseDescription </p>
+                            <div class="dst-btm">
+
+                                <span>@item.HousePrice TL</span>
+                            </div>
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Rezervasyon Yap</a></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+               }
+
+
+            </div>
+        </div>
+    </div>
+</section>*@

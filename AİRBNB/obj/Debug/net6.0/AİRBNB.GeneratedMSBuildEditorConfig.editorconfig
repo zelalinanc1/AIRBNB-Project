@@ -1,0 +1,124 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AİRBNB
+build_property.RootNamespace = AİRBNB
+build_property.ProjectDir = C:\Users\Dell\source\repos\AİRBNB\AİRBNB\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Dell\source\repos\AİRBNB\AİRBNB
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/Category/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/Category/UpdateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/House/AddHouse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG91c2VcQWRkSG91c2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/House/AddHouseProperty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG91c2VcQWRkSG91c2VQcm9wZXJ0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/House/Deneme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG91c2VcRGVuZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Areas/Admin/Views/House/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG91c2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Home/CityDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaXR5RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Home/GetHouse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRIb3VzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Home/SearchIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/House/HouseDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcSG91c2VEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Login/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2lnbkluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Login/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2lnblVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Reservation/AddReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cQWRkUmVzZXJ2YXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/Components/CityList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2l0eUxpc3RcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/Components/HouseCityList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG91c2VDaXR5TGlzdFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/Components/HouseList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG91c2VMaXN0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/GetDateNumber.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdldERhdGVOdW1iZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/source/repos/AİRBNB/AİRBNB/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4vb6enzzca

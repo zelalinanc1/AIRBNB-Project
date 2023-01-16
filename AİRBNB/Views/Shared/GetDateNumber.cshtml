@@ -1,0 +1,103 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/calendar/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/calendar/css/classic.css">
+    <link rel="stylesheet" href="~/calendar/css/classic.date.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/calendar/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/calendar/css/style.css">
+
+   
+</head>
+<body>
+
+   
+    <div class="content">
+
+        <div class="container text-left">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                   
+                    <form action="#" class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              
+                                <input type="text" class="form-control" id="input_from" placeholder="Giriş Tarihi">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              
+                                <input type="text" class="form-control" id="input_to" placeholder="Çıkış Tarihi">
+                            </div>
+                        </div>
+
+
+
+                        <button onclick="calcDiff()" class="btn btn-info">Hesapla</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="~/calendar/js/jquery-3.3.1.min.js"></script>
+    <script src="~/calendar/js/popper.min.js"></script>
+    <script src="~/calendar/js/bootstrap.min.js"></script>
+    <script src="~/calendar/js/picker.js"></script>
+    <script src="~/calendar/js/picker.date.js"></script>
+
+    <script src="~/calendar/js/main.js"></script>
+</body>
+</html>
+
+
+
+<script>
+
+    function calcDiff() {
+
+        var date1 = new Date($("#input_from").val());
+
+        var date2 = new Date($("#input_to").val());
+
+        var timeDifference = date2.getTime() - date1.getTime();
+
+
+
+        var milliSecondsInOneSecond = 1000;
+
+        var secondInOneHour = 3600;
+
+        var hoursInOneDay = 24;
+
+        var daysDiff = timeDifference / (milliSecondsInOneSecond * secondInOneHour * hoursInOneDay)
+
+        alert(daysDiff);
+    }
+
+    
+
+
+
+
+
+</script>

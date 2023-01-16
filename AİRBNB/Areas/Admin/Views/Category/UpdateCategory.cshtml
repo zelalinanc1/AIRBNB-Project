@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Kategori Güncelle</h1>
+<br />
+
+
+@*ilki action ismi ikincisi controller ismi üçüncüsü form metodu*@
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.CategoryId, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryName)
+        <br />
+        <button type="submit" class="btn btn-warning">Güncelle</button>
+    </div>
+
+
+
+    
+
+}

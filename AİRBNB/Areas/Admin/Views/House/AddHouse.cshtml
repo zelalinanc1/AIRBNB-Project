@@ -1,0 +1,344 @@
+﻿@model AİRBNB.Models.AddHouseImage
+@{
+    ViewData["Title"] = "AddHouse";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Yeni Ev Kaydı</h1>
+
+
+<form class="form-group" action="AddHouse" asp-controller="House" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+
+    @Html.Label("Aciklama")
+    @Html.TextBoxFor(x => x.HouseDescription, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    <br />
+     @Html.Label("Şehir")
+     @Html.DropDownListFor(x => x.CityId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+     <br />
+        @Html.Label("Ücret")
+        @Html.TextBoxFor(x => x.HousePrice, new { @class = "form-control" })
+        <br />
+        @Html.Label("Oda Sayısı")
+        @Html.TextBoxFor(x => x.HouseRoomNumbers, new { @class = "form-control" })
+        <br />
+        <div class="form-group">
+
+            <input type="hidden" class="form-control" name="HouseProperty" id="HouseProperty" placeholder="Özellik">
+        </div>
+        <div class="form-group">
+           
+            <input id="imageinput" type="file" name="HouseImage1" onchange="readUrl(this)">
+        </div>
+        <div class="form-group">
+            <input id="imageinput1" type="file" name="HouseImage2" onchange="readUrl1(this)">
+        </div>
+        <div class="form-group">
+            <label>Resim3</label>
+            <input id="imageinput2" type="file" name="HouseImage3" onchange="readUrl2(this)">
+        </div>
+        <div class="form-group">
+            <label>Resim4</label>
+            <input id="imageinput3" type="file" name="HouseImage4" onchange="readUrl3(this)">
+        </div>
+       
+        <div id="divID">
+            <input type="checkbox" name="test" value="Kettle" /> Kettle<br />
+            <input type="checkbox" name="test" value="Refrigerator" /> Refrigerator<br />
+            <input type="checkbox" name="test" value="Oven" /> Oven<br />
+            <input type="checkbox" name="test" value="Bed" /> Bed<br />
+            <input type="checkbox" name="test" value="Sofa bed" /> Sofa bed<br />
+            <input type="checkbox" name="test" value="Television" /> Television<br />
+            <input type="checkbox" name="test" value="Washing machine" /> Washing machine<br />
+            <input type="checkbox" name="test" value="Wardrobe" /> Wardrobe<br />
+          
+        </div>
+
+        <div id="deger">
+
+
+        </div>
+       
+            <div className="pre_img">
+                <span><img id="imagebox" src=""></span>
+            </div>
+
+           <div className="pre_img">
+            <span><img id="imagebox1" src=""></span>
+           </div>
+
+          <div className="pre_img">
+            <span><img id="imagebox2" src=""></span>
+          </div>
+
+        <div className="pre_img">
+            <span><img id="imagebox3" src=""></span>
+        </div>
+
+
+           
+          
+
+         
+          
+
+
+      
+    <button type="submit" class="btn btn-info">Kaydet</button>
+
+
+    </div>
+
+
+</form>
+<button name="send" id="sendbutton">İlk Resim İçin Gönder</button>
+
+<button name="send" id="sendbutton1">İkinci Resim İçin Gönder</button>
+
+<button name="send" id="sendbutton2">Üçüncü Resim İçin Gönder</button>
+
+<button name="send" id="sendbutton3">Dördüncü Resim İçin Gönder</button>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+
+    var ListOfProperty = [];
+    
+
+    $(function () {
+        $('#sendbutton').click(() => {
+            imagebox = $('#imagebox')
+            input = $('#imageinput')[0]
+            if (input.files && input.files[0]) {
+                let formData = new FormData();
+                formData.append('image', input.files[0]);
+                $.ajax({
+                    url: "http://localhost:5000/detectObject", // fix this to your liking
+                    type: "POST",
+                    data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    error: function (data) {
+                        console.log("upload error", data);
+                        console.log(data.getAllResponseHeaders());
+                    },
+                    success: function (data) {
+
+                       
+
+                        $.each(data, function (i, val) {
+
+                            $("#divID input[value='" + val + "']").prop('checked', true);
+                            ListOfProperty.push(val);
+
+                        });
+                        console.log(ListOfProperty);
+
+                       
+
+
+                      
+
+
+                    }
+                });
+
+            }
+        });
+        $('#sendbutton1').click(() => {
+            imagebox1 = $('#imagebox1')
+            input1 = $('#imageinput1')[0]
+            if (input1.files && input1.files[0]) {
+                let formData1 = new FormData();
+                formData1.append('image', input1.files[0]);
+                $.ajax({
+                    url: "http://localhost:5000/detectObject", // fix this to your liking
+                    type: "POST",
+                    data: formData1,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    error: function (data1) {
+                        console.log("upload error", data1);
+                        console.log(data.getAllResponseHeaders());
+                    },
+                    success: function (data1) {
+
+
+                        $.each(data1, function (y, val1) {
+
+                            $("#divID input[value='" + val1 + "']").prop('checked', true);
+                            ListOfProperty.push(val1);
+
+                        });
+                        console.log(ListOfProperty);
+
+
+                    }
+                });
+
+            }
+        });
+        $('#sendbutton2').click(() => {
+            imagebox2 = $('#imagebox2')
+            input2 = $('#imageinput2')[0]
+            if (input2.files && input2.files[0]) {
+                let formData2 = new FormData();
+                formData2.append('image', input2.files[0]);
+                $.ajax({
+                    url: "http://localhost:5000/detectObject", // fix this to your liking
+                    type: "POST",
+                    data: formData2,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    error: function (data2) {
+                        console.log("upload error", data2);
+                        console.log(data.getAllResponseHeaders());
+                    },
+                    success: function (data2) {
+
+
+                        $.each(data2, function (z, val2) {
+
+                            $("#divID input[value='" + val2 + "']").prop('checked', true);
+                            ListOfProperty.push(val2);
+
+                        });
+
+                        console.log(ListOfProperty);
+
+                    }
+                });
+
+            }
+        });
+        $('#sendbutton3').click(() => {
+            imagebox3 = $('#imagebox3')
+            input3 = $('#imageinput3')[0]
+            if (input3.files && input3.files[0]) {
+                let formData3 = new FormData();
+                formData3.append('image', input3.files[0]);
+                $.ajax({
+                    url: "http://localhost:5000/detectObject", // fix this to your liking
+                    type: "POST",
+                    data: formData3,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    error: function (data3) {
+                        console.log("upload error", data3);
+                        console.log(data.getAllResponseHeaders());
+                    },
+                    success: function (data3) {
+
+
+                        $.each(data3, function (t, val3) {
+
+                            $("#divID input[value='" + val3 + "']").prop('checked', true);
+                            ListOfProperty.push(val3);
+                        });
+                        
+                        console.log(ListOfProperty);
+                        console.log("*******************");
+                        var strings = ListOfProperty.toString();
+                        console.log(strings);
+                        document.getElementById("HouseProperty").value = strings;
+                        
+                    }
+                });
+
+            }
+        });
+       
+        
+       
+
+       
+    });
+   
+    function readUrl(input) {
+        imagebox = $('#imagebox')
+        console.log("evoked readUrl")
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                // console.log(e)
+
+                imagebox.attr('src', e.target.result);
+                imagebox.height(500);
+                imagebox.width(800);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+
+
+    }
+    function readUrl1(input1) {
+        imagebox1 = $('#imagebox1')
+        console.log("evoked readUrl")
+        if (input1.files && input1.files[0]) {
+            let reader1 = new FileReader();
+            reader1.onload = function (e) {
+                // console.log(e)
+
+                imagebox1.attr('src', e.target.result);
+                imagebox1.height(500);
+                imagebox1.width(800);
+            }
+            reader1.readAsDataURL(input1.files[0]);
+        }
+
+
+    }
+    function readUrl2(input2) {
+        imagebox2 = $('#imagebox2')
+        console.log("evoked readUrl")
+        if (input2.files && input2.files[0]) {
+            let reader2 = new FileReader();
+            reader2.onload = function (e) {
+                // console.log(e)
+
+                imagebox2.attr('src', e.target.result);
+                imagebox2.height(500);
+                imagebox2.width(800);
+            }
+            reader2.readAsDataURL(input2.files[0]);
+        }
+
+
+    }
+    function readUrl3(input3) {
+        imagebox3 = $('#imagebox3')
+        console.log("evoked readUrl")
+        if (input3.files && input3.files[0]) {
+            let reader3 = new FileReader();
+            reader3.onload = function (e) {
+                // console.log(e)
+
+                imagebox3.attr('src', e.target.result);
+                imagebox3.height(500);
+                imagebox3.width(800);
+            }
+            reader3.readAsDataURL(input3.files[0]);
+        }
+
+
+    }
+
+</script>
+
+
+
+

@@ -1,0 +1,22 @@
+﻿@{
+
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body>
+    @*@await Component.InvokeAsync("CityList")*@
+    <h1>Value : @ViewBag.Value</h1>
+    @await Component.InvokeAsync("HouseCityList",new { id =  1})
+    <h1>
+        dvshgdvghedghesv
+    </h1>
+    <b>Value: </b>@ViewBag.Value
+    <br />
+    <b>Text:</b>@ViewBag.Text
+   @*  @await Component.InvokeAsync("HouseList")*@
+</body>
+
+</html>
